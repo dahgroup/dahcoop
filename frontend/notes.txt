@@ -1,0 +1,7 @@
+Quick tip: you can have a browser window within vs code. 
+Copy the localhost URL, open command palette (ctrl+shift+P), 
+type 'simple browser' then enter and paste your URL. Now it 
+opens another tab with your website in it. To have it side 
+by side press ctrl + \ then drag and drop the browser tab to 
+the right. It will make alt tabbing and resizing windows much 
+easier.
