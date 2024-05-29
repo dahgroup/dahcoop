@@ -1,9 +1,13 @@
+import { useState } from 'preact/hooks'
 import { Box, Button, FormControl, InputAdornment, TextField, Typography } from '@mui/material'
 import { Title } from '../components/title'
 import EmailOutlined from '@mui/icons-material/EmailOutlined'
 import LockOutlined from '@mui/icons-material/LockOutlined'
 
 export function Account() {
+
+    const [action, setAction] = useState("LOGIN")
+
     return (
         <>
             <Box
@@ -16,30 +20,33 @@ export function Account() {
             >
 
                 <Title />
+                <Typography variant='p' sx={{ fontWeight: 500, m:2 }}>{action}</Typography>
                 {/* Buttons */}
                 <Box flexDirection="row">
                     <Button 
-                        variant="contained"
+                        variant={action==="LOGIN" ? "contained" : "outlined"}
+                        onClick={()=>{setAction("LOGIN")}}
                         sx={{
-                            color:'#fff',
                             m: 1,
-                            mt: 5,
+                            mt: 4,
                         }}
                         size='large'>
                             LOGIN
                     </Button>
 
                     <Button 
-                        variant="outlined" 
+                        variant={action==="REGISTER" ? "contained" : "outlined"}
+                        onClick={()=>{setAction("REGISTER")}}
                         sx={{
                             m: 1,
-                            mt: 5,
+                            mt: 4,
                         }}
                         size='large'>
                             REGISTER
                     </Button>
+
                 </Box>
-                {/* Login Form */}
+                
                 <FormControl>
                     <TextField
                         required
@@ -57,25 +64,27 @@ export function Account() {
                         sx={{
                             m: 3,
                         }}
-                        />
-                    <TextField
-                        required
-                        id="standard-password-input"
-                        label="Password"
-                        type="password"
-                        autoComplete="current-password"
-                        variant="standard"
-                        InputProps={{
-                            startAdornment: (
-                            <InputAdornment position="start">
-                                <LockOutlined />
-                            </InputAdornment>
-                            ),
-                        }}
-                        sx={{
-                            m: 3,
-                        }}
                     />
+                    {action === "REGISTER"?<div></div>:
+                        <TextField
+                            required
+                            id="standard-password-input"
+                            label="Password"
+                            type="password"
+                            autoComplete="current-password"
+                            variant="standard"
+                            InputProps={{
+                                startAdornment: (
+                                <InputAdornment position="start">
+                                    <LockOutlined />
+                                </InputAdornment>
+                                ),
+                            }}
+                            sx={{
+                                m: 3,
+                            }}
+                        />}
+                    
                     <Button 
                         variant="contained"
                         sx={{
@@ -83,7 +92,7 @@ export function Account() {
                             mt: 5,
                         }}
                         size='large'>
-                            LOGIN
+                            {action}
                     </Button>
                 </FormControl>
             </Box>
