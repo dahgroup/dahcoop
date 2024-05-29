@@ -1,5 +1,7 @@
-import { Box, Button, FormControl, TextField, Typography } from '@mui/material'
+import { Box, Button, FormControl, InputAdornment, TextField, Typography } from '@mui/material'
 import { Title } from '../components/title'
+import EmailOutlined from '@mui/icons-material/EmailOutlined'
+import LockOutlined from '@mui/icons-material/LockOutlined'
 
 export function Account() {
     return (
@@ -45,16 +47,31 @@ export function Account() {
                         label="Email"
                         type="email"
                         variant="standard"
+                        InputProps={{
+                            startAdornment: (
+                            <InputAdornment position="start">
+                                <EmailOutlined />
+                            </InputAdornment>
+                            ),
+                        }}
                         sx={{
                             m: 3,
                         }}
                         />
                     <TextField
+                        required
                         id="standard-password-input"
                         label="Password"
                         type="password"
                         autoComplete="current-password"
                         variant="standard"
+                        InputProps={{
+                            startAdornment: (
+                            <InputAdornment position="start">
+                                <LockOutlined />
+                            </InputAdornment>
+                            ),
+                        }}
                         sx={{
                             m: 3,
                         }}
