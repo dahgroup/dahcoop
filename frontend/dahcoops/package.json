@@ -1,23 +1,45 @@
 {
-  "name": "dahcoops",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.18",
-    "@mui/material": "^5.15.18",
-    "preact": "^10.19.6",
-    "react-router-dom": "^6.23.1"
-  },
-  "devDependencies": {
-    "@preact/preset-vite": "^2.8.2",
-    "vite": "^5.2.0"
-  }
+	"name": "dahcoops",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.11.4",
+		"@emotion/styled": "^11.11.5",
+		"@mui/icons-material": "^5.15.18",
+		"@mui/material": "^5.15.18",
+		"@preact/signals": "^1.2.2",
+		"axios": "^1.7.2",
+		"chart.js": "^4.4.0",
+		"dayjs": "^1.11.10",
+		"formik": "^2.4.6",
+		"is-reachable": "^5.2.1",
+		"preact": "^10.19.6",
+		"ramda": "^0.29.1",
+		"react-router-dom": "^6.23.1",
+		"swiper": "^10.3.0",
+		"to-words": "^4.0.0",
+		"validate.js": "^0.13.1",
+		"yup": "^1.4.0"
+	},
+	"devDependencies": {
+		"@preact/preset-vite": "^2.8.2",
+		"preact": "^10.20.1",
+		"vite": "^5.0.8",
+		"vite-plugin-html": "^3.2.2"
+	},
+	"alias": {
+		"react": "preact/compat",
+		"react-dom/test-utils": "preact/test-utils",
+		"react-dom": "preact/compat",
+		"react/jsx-runtime": "preact/jsx-runtime"
+	},
+	"eslintConfig": {
+		"extends": "preact"
+	}
 }
