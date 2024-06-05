@@ -4,6 +4,7 @@ import { Transactions } from './pages/transactions';
 import { Finance } from './pages/finance';
 import { Profile } from './pages/profile';
 import { Account } from './pages/account/account';
+import { ForgotPassword } from './pages/forgotpassword';
 
 export function App() {
 	return (
@@ -13,6 +14,7 @@ export function App() {
 			<Route path='/transactions' element={<Transactions />} />
 			<Route path='/finance' element={<Finance />} />
 			<Route path='/profile' element={<Profile />} />
+        		<Route path="/forgot-password" element={<ForgotPassword/>} />
 		</Routes>
 	);
 }
