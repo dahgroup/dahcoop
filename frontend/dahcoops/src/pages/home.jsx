@@ -26,6 +26,15 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 
+  const iconStyle = {
+    fontSize: '1.7rem',
+  };
+
+  const iconText = {
+    fontSize: '0.8rem',
+  };
+
+
 export function Home() {
     return (
         <>
@@ -99,38 +108,38 @@ export function Home() {
                     <Grid container spacing={3} mb={10}>
                         <Grid xs={6} md={6}>
                             <Item>
-                                <PaymentsIcon sx={{fontSize: '1.7rem'}}/>
-                                <Typography variant="button" display="block" sx={{fontSize: '0.8rem'}}>REQUEST <br/>WITHDRAWAL</Typography>
+                                <PaymentsIcon sx={iconStyle}/>
+                                <Typography variant="button" display="block" sx={iconText}>REQUEST <br/>WITHDRAWAL</Typography>
                             </Item>
                         </Grid>
                         <Grid xs={6} md={6}>
                             <Item>
-                                <LocalAtmIcon sx={{fontSize: '1.7rem'}}/>
-                                <Typography variant="button" display="block" sx={{fontSize: '0.8rem'}}>REQUEST <br/>LOAN</Typography>
+                                <LocalAtmIcon sx={iconStyle}/>
+                                <Typography variant="button" display="block" sx={iconText}>REQUEST <br/>LOAN</Typography>
                             </Item>
                         </Grid>
                         <Grid xs={6} md={6}>
                             <Item>
-                                <UpgradeIcon sx={{fontSize: '1.7rem'}}/>
-                                <Typography variant="button" display="block" sx={{fontSize: '0.8rem'}}>UPGRADE <br/>ACCOUNT</Typography>
+                                <UpgradeIcon sx={iconStyle}/>
+                                <Typography variant="button" display="block" sx={iconText}>UPGRADE <br/>ACCOUNT</Typography>
                             </Item>
                         </Grid>
                         <Grid xs={6} md={6}>
                             <Item>
-                                <AccountBalanceWalletIcon sx={{fontSize: '1.7rem'}}/>
-                                <Typography variant="button" display="block" sx={{fontSize: '0.8rem'}}>VIEW ACCOUNT <br/>AND LIABILITIES</Typography>
+                                <AccountBalanceWalletIcon sx={iconStyle}/>
+                                <Typography variant="button" display="block" sx={iconText}>VIEW ACCOUNT <br/>AND LIABILITIES</Typography>
                             </Item>
                         </Grid>
                         <Grid xs={6} md={6}>
                             <Item>
-                                <RateReviewIcon sx={{fontSize: '1.7rem'}}/>
-                                <Typography variant="button" display="block" sx={{fontSize: '0.8rem'}}>COMPlAINTS <br/> OR SUGGESTIONS</Typography>
+                                <RateReviewIcon sx={iconStyle}/>
+                                <Typography variant="button" display="block" sx={iconText}>COMPlAINTS <br/> OR SUGGESTIONS</Typography>
                             </Item>
                         </Grid>
                         <Grid xs={6} md={6}>
                             <Item>
-                                <ExitToAppIcon sx={{fontSize: '1.7rem'}}/>
-                                <Typography variant="button" display="block" sx={{fontSize: '0.8rem'}}>EXIT <br/>COOPERATIVE</Typography>
+                                <ExitToAppIcon sx={iconStyle}/>
+                                <Typography variant="button" display="block" sx={iconText}>EXIT <br/>COOPERATIVE</Typography>
                             </Item>
                         </Grid>
                     </Grid>
